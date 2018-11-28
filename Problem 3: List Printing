@@ -1,0 +1,12 @@
+#Program is given a list. Program prints each number in the list less than 5 as a new list.
+
+list1 = [1, 1, 2, 3, 5, 8, 13 , 21, 34, 55 ,89]
+
+num = int(input('Enter Your Number: '))
+
+list2 = []
+
+for i in a:
+    if i < num:
+        list2.append(i)
+print(list2)
