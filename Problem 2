@@ -1,0 +1,24 @@
+#1. Asks user for number, Tells them if its even or odd
+
+num = int(input('Enter your number:'))
+if num%2 == 0:
+    print('Your Number is Even.')
+else:
+    print('Your Number is Odd.')
+    
+#2. Same program, adds a step to tell the user if their number is divisible by 4.
+num = int(input('Enter your number:'))
+if num%4 == 0:
+    print('Your Number is Divisible by 4.')
+elif num%2 ==0:
+    print('Your Number is Even.')
+else:
+        print('Your Number is Odd.')
+        
+#3. Asks the user for two numbers. Tells the user if the 1st number is divisible by the 2nd.
+num = int(input('Enter your first number: '))
+check = int(input('Enter your second number: '))
+if num%check == 0:
+    print('The second number divides evenly into the first.')
+else:
+    print('The second number does not divide evenly into the first.')
