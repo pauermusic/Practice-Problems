@@ -1,0 +1,11 @@
+## Asks user for number. Lists all divisors of that number.
+
+num = int(input('Enter Your Number: '))
+numrange = range(1, num)
+
+print('The divisors of your number are: ')
+for i in numrange:
+    if num%i == 0:
+        print(i)
+
+close = input("You may now close the program.")
