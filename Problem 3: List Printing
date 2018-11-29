@@ -6,7 +6,7 @@ num = int(input('Enter Your Number: '))
 
 list2 = []
 
-for i in a:
+for i in list1:
     if i < num:
         list2.append(i)
 print(list2)
