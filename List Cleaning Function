@@ -1,0 +1,10 @@
+spam = ['apples', 'bananas', 'tofu', 'cats']
+
+def listcleaner(list):
+    for i in range (0,len(list)):
+        if i != len(list)-1:
+            print(list[i], end =', ')
+        else:
+            print('and ' + list[i] + '.')
+
+listcleaner(spam)
