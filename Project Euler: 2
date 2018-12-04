@@ -1,0 +1,16 @@
+## Finds the sum of all even fibbonaci-sequence numbers below 4 million.
+
+fib = [0,1]
+newnum = 0
+
+while newnum < 4000000:
+    newnum = fib[-1] + fib[-2]
+    fib.append(newnum)
+
+evenfib = []
+
+for i in fib:
+    if i % 2 == 0:
+        evenfib.append(i)
+
+print(sum(evenfib))
