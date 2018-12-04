@@ -1,0 +1,23 @@
+## This program flips the grid 90 degrees and reprints it without
+## [square brackets] or commas.
+
+grid = [['.', '.', '.', '.', '.', '.'],
+        ['.', 'O', 'O', '.', '.', '.'],
+        ['O', 'O', 'O', 'O', '.', '.'],
+        ['O', 'O', 'O', 'O', 'O', '.'],
+        ['.', 'O', 'O', 'O', 'O', 'O'],
+        ['O', 'O', 'O', 'O', 'O', '.'],
+        ['O', 'O', 'O', 'O', '.', '.'],
+        ['.', 'O', 'O', '.', '.', '.'],
+        ['.', '.', '.', '.', '.', '.']]
+
+x = 0
+y = 0
+
+while x < len(grid) and y < len(grid[0]):
+    for i in range(len(grid)):
+        print((grid[i][x]), end='')
+
+    print(' ')
+    y += 1
+    x += 1
