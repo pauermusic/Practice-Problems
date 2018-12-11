@@ -1,0 +1,24 @@
+
+
+def sumsquares():
+    a = 1
+    c = 0
+    while a <= 100:
+        b = a**2
+        c = c + b
+        a += 1
+    print(c)
+    return c
+
+
+def squaresums():
+    x = 1
+    y = 0
+    while x <= 100:
+        y = y + x
+        x += 1
+    print(y**2)
+    return y ** 2
+
+
+print(squaresums() - sumsquares())
