@@ -1,0 +1,23 @@
+## This program holds a database of birthdays and allows a user to type in a name to get their birthday.
+## If the name they typed is not in the database, they will be asked for the birthday and they will be 
+## appended into the list.
+
+birthdays = {'Iwona Auer': 'May 20th, 1962', 'Mark Auer': 'May 14th, 1989',
+             'Michael Auer': 'June 17th, 1986', 'Roland Auer': 'August 22nd, 1954',
+             'Reanne Henesy': 'November 7th, 1991', 'Conrad VandenBrink': 'April 27th, 1992',
+             'Mike Stuart': 'January 3rd, 1992', 'Mikolaj Warzocha': 'December 6th, 1991',
+             'Philip Auer': 'February 6th, 1993'}
+
+while True:
+    name = input('Enter a first and last name (leave blank to quit): ')
+    if name == '':
+        break
+    if name in birthdays:
+        print(name + ' has their birthday on ' + birthdays[name] + '.')
+    else:
+        print('I do not have birthday information for' + name)
+        bday = input('Please enter their birthday: ')
+        birthdays[name] = bday
+        print('Birthday database updated.')
+        close = input('You may now close the program')
+    
