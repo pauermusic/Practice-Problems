@@ -1,0 +1,24 @@
+newnum = 1 ## Stores the new number to be summed in the fibbonaci sequence
+fibposition = 3 ## Stores the current position in the fibbonaci sequence
+secondlastnum = 0 ## Stores the 2nd last number in the sequence
+lastnum = 1 ## Stores the last number in the sequence
+
+x = int(input("Enter your number: "))
+
+
+## Prints out the first 2 numbers in the fibbonaci sequence
+
+print("Position: 1 Value: 0")
+print("Position: 2 Value: 1")
+
+## Prints out the first x numbers in the fibonnaci sequence
+
+while fibposition <= x:
+    newnum = lastnum + secondlastnum
+    print("Position: " + str(fibposition)
+          + " Value: " + str(newnum))
+    secondlastnum = lastnum
+    lastnum = newnum
+    fibposition = fibposition + 1
+
+print("Operation Complete")
