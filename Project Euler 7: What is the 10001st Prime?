@@ -1,0 +1,27 @@
+## Prime number testing function
+def primetest(x):
+    count = 0
+    for i in range(1, x+1):
+        if x % i == 0:
+            count += 1
+            if count > 2:
+                break
+    if count > 2:
+        return 'Not Prime'
+    if count == 2:
+        return 'Prime'
+    if count < 2:
+        return 'Not Prime'
+
+count2 = 0 ## Counts the number of prime numbers reached at a given point
+highprime = 1 ## Tracks the highest prime number seen in the function
+
+## Prints the 10001st prime number
+for i in range(1, 10000000000000000000000000):
+    primetest(i)
+    if primetest(i) == 'Prime':
+        highprime = i
+        count2 += 1
+    if count2 == 10001:
+        print(highprime)
+        break
