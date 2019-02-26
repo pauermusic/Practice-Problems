@@ -1,0 +1,139 @@
+file = open('Problem 11.txt', 'r')
+linelist = []
+linelist2 = []
+FullList = []
+
+for line in file:
+    linelist.append(line)
+
+for x in linelist:
+    if x[-1:] == '\n':
+        line = x[:-1]
+    else:
+        line = x[:]
+    linelist2.append(line)
+
+for x in linelist2:
+    y = x.split(' ')
+    FullList.append(y)
+
+i = 0
+maxproduct = 0
+
+## Left to Right Iterations
+print('\n Left to Right Iterations: \n')
+while i < 20:
+    x = 0
+    y = 4
+    while y < 21:
+        product = 1
+        iteration = FullList[i][x:y]
+        print(iteration)
+        for number in iteration:
+            number = int(number)
+            product = number * product
+            if product > maxproduct:
+                maxproduct = product
+                print(maxproduct)
+        x += 1
+        y += 1
+    i += 1
+
+## Up to Down Iterations
+print('\n Up to Down Iterations: \n')
+
+i = 0
+x = 0
+rowcount = 0
+product = 1
+maxproduct2 = 0
+
+while rowcount < 17:
+    updown = []
+    while x < 20:
+        while i < 4:        
+            updown.append(FullList[rowcount + i][x])        
+            i += 1
+        print(updown)
+        for number in updown:
+            number = int(number)
+            product = product * number
+        if product > maxproduct2:
+            maxproduct2 = product
+            print(maxproduct2)
+        updown = []
+        i = 0
+        x += 1
+        product = 1 
+    rowcount += 1
+    x = 0
+
+## TopLeft to BottomRight Iterations
+print('\n Top-Left to Bottom-Right Iterations: \n')
+ 
+i = 0
+x = 0
+column = 0
+row = 0
+product = 1
+maxproduct3 = 0
+
+while row < 17:
+    TopLeft = []
+    while column < 17:
+        while i < 4:        
+            TopLeft.append(FullList[row + i][column + x])        
+            i += 1
+            x += 1
+        print(TopLeft)
+        for number in TopLeft:
+            number = int(number)
+            product = product * number
+        if product > maxproduct3:
+            maxproduct3 = product
+            print(maxproduct3)
+        TopLeft = []
+        i = 0
+        x = 0
+        column += 1
+        product = 1
+    column = 0
+    row += 1
+
+    
+## TopRight to BottomLeft Iterations
+print('\n Top-Right to Bottom-Left Iterations: \n')
+ 
+i = 0
+x = 0
+column = 3
+row = 0
+product = 1
+maxproduct4 = 0
+
+while row < 17:
+    TopRight = []
+    while column < 20:
+        while i < 4:        
+            TopRight.append(FullList[row + i][column + x])        
+            i += 1
+            x -= 1
+        print(TopRight)
+        for number in TopRight:
+            number = int(number)
+            product = product * number
+        if product > maxproduct4:
+            maxproduct4 = product
+            print(maxproduct4)
+        TopRight = []
+        i = 0
+        x = 0
+        column += 1
+        product = 1
+    column = 3
+    row += 1
+
+print(maxproduct, maxproduct2, maxproduct3, maxproduct4, sep = '\n')
+        
+
+file.close()
