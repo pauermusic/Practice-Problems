@@ -1,0 +1,10 @@
+menu = ['coffee', 'tea', 'sandwich', 'soup']
+
+stock = {'coffee': 500,'tea': 100, 'sandwich': 66, 'soup': 32}
+
+price = {'coffee': 2, 'tea': 2, 'sandwich': 6, 'soup': 4}
+
+for key in stock:
+    print(key + ': ' + 'Stock = ' + str(stock[key]) +
+          ' Price = ' + str(price[key]) + ' Total = '
+          + str(stock[key] * price[key]))
