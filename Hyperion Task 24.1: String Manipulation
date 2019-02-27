@@ -1,0 +1,21 @@
+def daysofweek(x):
+    print('Monday', 'Tuesday', 'Wednesday',
+          'Thursday', 'Friday', 'Saturday',
+          'Sunday', sep = '\n')
+
+daysofweek('')
+
+teststring = 'This is a string of words'
+
+def helloify(string):
+    x = 1
+    stringlist = string.split(' ')
+    for word in stringlist:
+        if x%2 == 0:
+            stringlist[x-1] = 'hello'
+        x += 1
+    string = ' '.join(stringlist)
+    print(string)
+    return string
+    
+helloify(teststring)
