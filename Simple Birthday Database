@@ -1,4 +1,4 @@
-## This program holds a database of birthdays and allows a user to type in a name to get their birthday.
+## Holds a database of birthdays and allows a user to type in a name to get their birthday.
 ## If the name they typed is not in the database, they will be asked for the birthday and they will be 
 ## appended into the list.
 
