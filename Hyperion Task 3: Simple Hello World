@@ -1,0 +1,6 @@
+name = input("Enter Your Name: ")
+print(name)
+age = input("Enter Your Age: ")
+print(age)
+print()
+print("Hello World!")
