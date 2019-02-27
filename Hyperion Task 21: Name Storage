@@ -1,0 +1,10 @@
+list = []
+
+name = input('Enter a name: ')
+
+while name != 'John':
+    list.append(name)
+    name = input('Enter a name: ')
+
+print(list, sep='')
+
