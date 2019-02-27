@@ -1,0 +1,9 @@
+startingyear = int(input('What year would you like to start with? '))
+numberofyears = int(input('How many years would you like to check? '))
+
+for i in range (startingyear, startingyear + numberofyears):
+    if i % 4 == 0:
+        print(str(i) + ' is a leap year.')
+    if i % 4 != 0:
+        print(str(i) + ' is not a leap year.')
+
