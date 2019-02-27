@@ -1,0 +1,4 @@
+countrymap = {'Canada': 'Ottawa', 'England': 'London', 'Poland': 'Warsaw', 'Sweden': 'Stockholm'}
+
+## Prints the capital of Sweden
+print(countrymap['Sweden'])
