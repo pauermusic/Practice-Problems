@@ -1,0 +1,25 @@
+x = 0
+sum = 0
+numberofentries = 0
+name = ''
+
+while str.lower(name) != 'philip':
+    name = input('Enter your name: ')
+
+
+while x != -1:
+    x = int(input('Enter a number: '))
+    if x == -1:
+        numberofentries += 1
+        print('It took you ' + str(numberofentries) + ' tries to input the exit number -1.' )
+        break
+    if x == 0:
+        numberofentries += 1
+        print('You have terminated the program.')
+        break
+    sum += x
+    numberofentries += 1
+
+if int(x) != 0:
+    print('The average of your numbers (excluding the exit number) is ' + str(sum / numberofentries))
+
