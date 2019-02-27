@@ -1,0 +1,15 @@
+string = 'Hello World'
+listed = []
+
+
+for i in range (0, len(string)):
+    listed.append(string[i])
+    if i % 2 == 0:
+        #print(listed)
+        listed[i] = str.upper(listed[i])
+    elif i % 2 != 0:
+        listed[i] = str.lower(listed[i])
+
+
+string2 = ''.join(listed)
+print(string2)
