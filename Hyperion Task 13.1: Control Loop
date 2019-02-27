@@ -1,0 +1,12 @@
+num = int(input('Enter a number less than 100: '))
+
+while num >= 100:
+    num = int(input('Enter a number less than 100: '))
+
+if num < 100 and num % 2 == 0:
+    print(num*2)
+elif num < 100 and num % 3 == 0:
+    print(num*3)
+
+
+
