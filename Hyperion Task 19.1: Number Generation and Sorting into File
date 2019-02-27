@@ -1,0 +1,60 @@
+## List of numbers to be used later
+
+listofnumbers = []
+
+
+afile = open('numbers1.txt', 'r+')
+
+## Generates a random list of numbers from lowest to highest
+import random
+randomint1 = random.randint(1,4)
+randomint2 = random.randint(1, 101)
+
+## Lists numbers in file numbers1.txt
+for i in range(1, randomint2, randomint1):
+    afile.write(str(i) +'\n')
+    
+## Appends the numbers into a list
+for line in afile:
+    listofnumbers.append(int(line[:-1]))
+    
+afile.close()
+
+
+
+
+bfile = open('numbers2.txt', 'r+')
+
+## Generates a random list of numbers from highest to lowest
+import random
+randomint1 = random.randint(1,4)
+randomint2 = random.randint(1, 101)
+
+## Lists numbers in file numbers2.txt
+for i in range(randomint2, 1, -randomint1):
+    bfile.write(str(i) + '\n')
+    
+## Appends the numbers into a list
+for line in bfile:
+    listofnumbers.append(int(line[:-1]))
+    
+bfile.close()
+
+
+## Sorts list of numbers from lowest to highest
+listofnumbers.sort()
+print(listofnumbers)
+
+## Compiles numbers1.txt and numbers2.txt into a sorted list
+
+cfile = open('allnumbers.txt', 'w')
+
+for i in listofnumbers:
+    cfile.write(str(i) + '\n')
+
+cfile.close()
+
+close = input('')
+
+
+
