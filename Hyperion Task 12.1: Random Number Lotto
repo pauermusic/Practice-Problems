@@ -1,0 +1,21 @@
+import random
+
+lotnum = random.randint(9,100)
+lotnum = str(lotnum)
+lotnumfirstdigit = lotnum[0:1]
+lotnumseconddigit = lotnum[1:2]
+
+guess = input('Enter a 2-digit number as your guess: ')
+guessfirstdigit = guess[0:1]
+guessseconddigit = guess[1:2]
+
+print('The lottery number was ' + str(lotnum) + '.')
+
+if guess == lotnum:
+    print('Congratulations, you have an exact match, you win R10 000.00!')
+elif reversed(guess) == lotnum:
+    print('Congratulations, you have all digits, you win R5 000.00')
+elif guessfirstdigit or guessseconddigit == lotnumfirstdigit or lotnumseconddigit:
+    print('Congratulations, you have one digit, you win R1 000.00')
+else:
+    print('Sorry, no match.')
