@@ -1,0 +1,14 @@
+product1name = input("Enter the name of product 1: ")
+product2name = input('Enter the name of product 2: ')
+product3name = input('Enter the name of product 3: ')
+
+
+product1 = float(input("Enter Product 1 Price: "))
+product2 = float(input("Enter Product 2 Price: "))
+product3 = float(input("Enter Product 3 Price: "))
+totalprice = product1 + product2 + product3
+avgprice = (product1 + product2 + product3) / 3
+avgprice = round(avgprice, 2)
+print("The total price of " + product1name + ', ' + product2name + ' and ' + product3name
+      + ' is ' + str(totalprice) + " and the average is " +
+      str(avgprice) + ".")
