@@ -1,0 +1,33 @@
+values = {'Vowels': 0, 'Words': 0, 'Lines': 0}
+
+doc = open('input.txt', 'r+')
+
+for line in doc:
+    values['Lines'] += 1
+
+doc.close()
+doc = open('input.txt', 'r+')
+
+doctext = doc.read()
+for char in doctext:
+    if char == 'a' or char == 'e' or char == 'i' or char == 'o' or char == 'u':
+        values['Vowels'] += 1
+
+doc.close()
+doc = open('input.txt', 'r+')
+
+for line in doc:
+    words = line.split()
+    values['Words'] = len(words)
+
+
+
+#print(words)
+
+
+
+
+
+print(values)
+        
+
