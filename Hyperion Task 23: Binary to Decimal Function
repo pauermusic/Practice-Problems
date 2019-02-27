@@ -1,0 +1,21 @@
+def binarytodecimal(x):
+    length = len(x)
+    sum = 0
+    for i in x:
+        if i != '1' and i != '0':
+            sum = 'invalid'
+            break
+        if i == '1':
+            sum += (2**(length-1))
+        if i == '0':
+            sum += 0
+        length -= 1
+    if sum == 'invalid':
+        print('The number entered is not a binary number.')
+    else:
+        print(sum)
+
+
+int = input('Enter a binary number: ')
+
+binarytodecimal(int)
