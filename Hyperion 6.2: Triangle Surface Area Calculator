@@ -1,0 +1,7 @@
+side1 = float(input(("Enter Length of Side 1: ")))
+side2 = float(input("Enter Length of Side 2: "))
+side3 = float(input(("Enter Length of Side 4: ")))
+p = (side1 + side2 + side3) / 2
+import math
+area = math.sqrt((p*(p - side1)*(p - side2)*(p - side3)))
+print(area)
