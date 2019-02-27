@@ -1,0 +1,10 @@
+str = "This is a String"
+int = 99
+float = 99.3
+boolean = False
+
+print(str)
+print()
+print(float)
+print()
+print(boolean)
