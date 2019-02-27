@@ -1,0 +1,12 @@
+favmovies = ['The Matrix', 'Gran Torino', 'Saving Private Ryan', 'Warcraft', 'Princess Mononoke']
+i = 1
+
+#method 1
+for movie in favmovies:
+    print('Movie ' + str(i) + ': ' + movie)
+    i += 1
+
+print('\n')
+#method 2
+for i, movie in enumerate(favmovies):
+    print('Movie ' + str(i+1) + ': ' + movie)
