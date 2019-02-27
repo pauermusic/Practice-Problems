@@ -1,0 +1,8 @@
+name = input("Enter Your Name: ")
+age = input("Enter Your Age: ")
+housenum = input("Enter Your House Number: ")
+streetname = input("Enter Your Street Name: ")
+
+print("This is " + name + ". He is " + str(age) +
+      " years old and lives at " + str(housenum) + " " +
+      streetname + ".")
