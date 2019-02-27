@@ -1,0 +1,69 @@
+## Note: This program has 2 errors
+
+afile = open('input.txt', 'r', encoding='utf-8-sig')
+
+listoflines = []
+
+               
+ 
+for line in afile:
+    listoflines.append(line) ## Stores each line into a list
+
+
+dic = {}
+
+for i in range(0, len(listoflines)):
+    x = listoflines[i]
+    if x[-1] == '\n':
+        x = x[4:-1]
+    else:
+        x = x[4:]
+    listoflines[i] = x ## Modifies the format of each list entry to remove the letters and '\n'
+
+    dic[i] = x.split(',') ## Splits each list entry into CSV. Organizes the entries by line in a dictionary.
+
+
+for nums in dic.values():
+    for i in nums:
+        i = int(i) ## Converts all dictionary list values into intergers
+        #print(i+2) ## This line can execute succesfully, proving that the values were converted to integers successfully 
+
+
+## The following block of code is supposed to replace each dictionary value fom the line number (ie. 0, 1, 2, etc.)
+## to the type of calculation being requested (ie. min, max, avg)
+
+        
+with open('input.txt', 'r', encoding='utf-8-sig') as f: ##This line won't work if i simply say "for line in afile: "
+                                                        ## Only works with this new syntax, why? It worked with the previous syntax above...
+    for line in f.readlines():
+        count = 0
+        first3 = line[0:3]        
+        dic[first3] = dic[count]        
+        #del dic[count]                                 ## Why do I get a key error when I insert this line to try and replace the dictionary keys?
+        count += 1                                      ## Without this line of code I duplicate instead of replace which is not my intention.
+        
+
+        
+
+## I now have a dictionary organized like this: {type of calculation required, [list of numbers to calculate]}
+## The following code will perform the respective calculation on the list of values.
+
+print(dic)
+
+
+for k, v in dic.items():
+    if k == 'min':
+        print(min(v))
+    if k == 'max':
+        print(max(v))
+    if k == 'avg':
+        print(sum(v))/(len(v))   ## I get an Typeerror here saying TypeError: unsupported operand type(s) for +: 'int' and 'str'
+                                ## Even though I converted all of my list values to integers from strings in Line 29..
+                                ## Why are there still registered as strings?
+
+
+
+
+
+
+afile.close()
