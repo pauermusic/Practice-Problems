@@ -1,0 +1,9 @@
+type = input("Employee or Manager?: ").lower()
+if type == "manager":
+    hoursworked = int(input("Enter number of hours worked: "))
+    monthlywage = 40 * hoursworked
+    print("Your monthly wage is " + "R" + str(monthlywage) + ".")
+if type == "employee":
+    sales = int(input("Enter your gross sales for the month: "))
+    monthlywage = 2000 + (0.08 * sales)
+    print("Your monthly wage is " + "R" + str(monthlywage) + ".")
