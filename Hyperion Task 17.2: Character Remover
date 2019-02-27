@@ -1,0 +1,7 @@
+string = input("Enter your string: ")
+remove = input("Enter the characters you would like to remove: ")
+
+for i in remove:
+    string = string.replace(i, '')
+
+print(string)
