@@ -1,0 +1,17 @@
+swimtime = float(input("Enter the swim time in minutes: "))
+cycletime = float(input("Enter the cycle time in minutes: "))
+runtime = float(input("Enter the running time in minutes: "))
+
+totaltime = float(swimtime + cycletime + runtime)
+print('The total triathalon time is ' + str(totaltime) + '.')
+
+position = int(input('Enter the position placed in the triathlon: '))
+
+if totaltime <= 100 and position == 1:
+    print('Award received: Provincial Colours.')
+elif totaltime <= 110 and position == 2 or 3:
+    print('Award received: Provincial Half Colours.')
+elif totaltime <= 115:
+    print('Award received: Provincial Scroll.')
+else:
+    print('No award received.')
