@@ -1,0 +1,14 @@
+abbreviations = {'lol': 'laugh out loud', 'lmao': 'laugh my ass off',
+                 'rofl': 'rolling on floor laughing', 'omw': 'on my way',
+                 'brb': 'be right back', 'wts': 'wanting to sell', 'wtb':
+                 'wanting to buy'}
+
+abbreviations['brt'] = 'be right there'
+abbreviations['brb'] = 'be right back'
+
+abcheck = (input('Enter an abbreviation: ')).lower()
+
+if abcheck in abbreviations:
+    print(abbreviations[abcheck])
+else:
+    print('Abbreviation not found')
