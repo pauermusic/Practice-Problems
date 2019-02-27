@@ -1,0 +1,102 @@
+## This function translates nucleotides into Amino Acids.
+def translate(dnasequence):
+    a = 0
+    b = 3
+    for i in range(0, len(dnasequence)):
+        aminoacid = dnasequence[a:b]
+        if aminoacid == 'ATT' or aminoacid == 'ATC' or aminoacid == 'ATA':
+            print('Isoleucine', end = ', ')
+        elif aminoacid == 'CTT' or aminoacid == 'CTC' or aminoacid == 'CTA' or aminoacid == 'CTG'\
+                or aminoacid == 'TTA' or aminoacid == 'TTG':
+            print('Leucine', end = ', ')
+        elif aminoacid == 'GTT' or aminoacid == 'GTC' or aminoacid == 'GTA' or aminoacid == 'GTG':
+            print('Valine', end = ', ')
+        elif aminoacid == 'TTT' or aminoacid == 'TTC':
+            print('Phenylalanine', end = ', ')
+        elif aminoacid == 'ATG':
+            print('Methionine', end =', ')
+        elif aminoacid == '':
+            print('', end = '')
+        else:
+            print('X', end = ', ')
+        a += 3
+        b += 3
+    print('\n')
+
+## This function searches for the mutation "r" in a DNA sequence and
+## returns the location in the sequence in which the mutation is found
+    
+def mutate():
+    dnastring = ''
+    file = open('DNA.txt', 'r')    
+    for line in file:
+        dnastring += line
+    i = 0
+    for char in dnastring:
+        if char == 'a':
+            return i
+            break
+        i += 1
+
+## Getting the data from the original DNA file into a single variable
+fileOriginal = open('DNA.txt', 'r')
+
+dnastring1 = ''
+for line in fileOriginal:    
+    dnastring1 += line
+
+fileOriginal.close()
+
+## Replacing the mutation from the original data with another nucleotide
+## and outputting the new DNA into normalDNA.txt
+fileA = open('normalDNA.txt', 'w')
+
+dnastring1list = []
+for char in dnastring1:
+    dnastring1list.append(char)
+    
+dnastring1list[mutate()] = 'A'
+dnastring1 = ''.join(dnastring1list)
+
+fileA.write(dnastring1)
+fileA.close()
+
+
+## Once again getting the data from the original DNA file into a single variable
+fileOriginal = open('DNA.txt', 'r')
+
+dnastring2 = ''
+for line in fileOriginal:    
+    dnastring2 += line
+
+fileOriginal.close()
+
+## Replacing the mutation from the original data with another, different nucleotide
+## and outputting the new DNA into mutatedDNA.txt
+fileB = open('mutatedDNA.txt', 'w')
+
+dnastring2list = []
+for char in dnastring2:
+    dnastring2list.append(char)
+    
+dnastring2list[mutate()] = 'T'
+dnastring2 = ''.join(dnastring1list)
+
+fileB.write(dnastring2)
+fileB.close()
+
+## This function opens a file, reads the nucleotides, and translates the nucleotide
+## data into amino acids
+def txtTranslate(filename):
+    file = open(filename, 'r')
+    dnastring = ''
+    for line in file:
+        dnastring += line
+    translate(dnastring)
+
+txtTranslate('normalDNA.txt')
+print('\n')
+txtTranslate('mutatedDNA.txt')
+    
+    
+    
