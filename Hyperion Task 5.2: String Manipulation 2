@@ -1,0 +1,7 @@
+string1 = "The!quick!brown!fox!jumps!over!the!lazy!dog!"
+string1 = string1.replace("!", " ")
+string1 = string1.upper()
+string1 = string1[::-1]
+print(string1)
+print('Operation completed.)
+ 
