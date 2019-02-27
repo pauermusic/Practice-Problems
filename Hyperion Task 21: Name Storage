@@ -1,10 +1,20 @@
 list = []
+tries = int(input('Enter the number of attempts: '))
 
 name = input('Enter a name: ')
 
+counter = 1
 while name != 'John':
     list.append(name)
     name = input('Enter a name: ')
+    counter += 1
+    if counter >= tries:
+        list.append(name)
+        print('Total number of attempts reached.')
+        break
 
 print(list, sep='')
+
+end = input('')
+
 
