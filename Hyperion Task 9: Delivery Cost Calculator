@@ -1,0 +1,35 @@
+deliverycost = 0
+
+price = float(input("Enter the price of the package: "))
+deliverycost += price
+
+distance = float(input("What is the total delivery distance"
+                     " in kilometers?: "))
+
+airfreight = input("Air or freight delivery? ").lower()
+if airfreight == "air":
+    deliverycost += distance * 0.36
+if airfreight == "freight":
+    deliverycost += distance * 0.25
+
+insurance = input("Limited or full insurance? ").lower()
+if insurance == "full":
+    deliverycost += 50
+if insurance == "limited":
+    deliverycost += 25
+
+gift = input("Gift or no Gift? ").lower()
+if gift == "gift":
+    deliverycost += 15
+else:
+    gift = gift
+
+prioritystandard = input("Priority or Standard Delivery? ").lower()
+if prioritystandard == "priority":
+    deliverycost += 100
+if prioritystandard == "standard":
+    deliverycost += 20
+
+'{:.2f}'.format(deliverycost)
+
+print("Your delivery cost is R" + str('{:.2f}'.format(deliverycost)) + ".")
