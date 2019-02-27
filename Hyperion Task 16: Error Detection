@@ -1,0 +1,17 @@
+#primechecker
+
+prime = ''
+i = float('Enter your number: ')  #Compilation error: Incorrect syntax for user-inputted number
+
+for x in range (0, i+1) #Compilation error: Missing colon
+    if x % i == 0: #Runtime error / Logic Error: Divide by zero (runtime error: divide by 0).
+        #  Also, Range should not include 0, and should start at 2 (logic error).
+        print('The number you have entered is not a prime number.')
+        prime = 'Not prime'
+        break
+
+if prime != 'Not prime':
+    print('The number you have entered is a prime number.') 
+#Logic Error: Since the range checked is i + 1, it will always find a divisible factor since
+#the range includes the the number i, and i will always be divisible by itself. Even if the program
+#could run it would always say the number is not prime.
