@@ -1,0 +1,10 @@
+string = input("Enter your string: ")
+charlist = {}
+
+for i in string:
+    if i in charlist:
+        charlist[i] += 1
+    else:
+        charlist[i] = 1
+
+print(charlist)
