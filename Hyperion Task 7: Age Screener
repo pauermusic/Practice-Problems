@@ -1,0 +1,6 @@
+yearborn = int(input("Enter the year you were born: "))
+
+if 2019 - yearborn < 18:
+    print("You are too young to enter.")
+else:
+    print("Congrats you are old enough.")
