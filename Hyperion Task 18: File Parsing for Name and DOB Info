@@ -1,0 +1,44 @@
+f = open('DOB.txt', 'r+')
+
+x = 0
+spacecount = 0
+linecount = 1
+
+print('Name\n')
+
+for line in f:      
+        print(str(linecount), end = '  ') 
+        linecount += 1  
+        while spacecount < 2:
+                x += 1
+                if line[x] == ' ':
+                        spacecount += 1
+        print(line[:x], end = '\n')
+        spacecount = 0
+        x = 0
+
+
+linecount = 1
+spacecount = 0
+x = 0
+
+f.close()
+f = open('DOB.txt', 'r+')        
+
+print('\nBirth Date\n')
+
+
+for line in f:        
+        print(str(linecount), end = '  ') 
+        linecount += 1  
+        while spacecount < 3:
+                x += 1
+                if line[x] == ' ':
+                        spacecount += 1
+        print(line[x:], end = '')
+        spacecount = 0
+        x = 0
+
+f.close()
+
+close = input('')
