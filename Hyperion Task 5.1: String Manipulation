@@ -1,0 +1,11 @@
+hero = "Super Man"
+hero = hero.upper()
+hero = hero.replace("", "^")
+
+herolisted = hero.split(' ')
+x = 0
+for word in herolisted:
+    herolisted[x] = (word[1:-1])
+    x += 1
+
+print(' '.join(herolisted))
