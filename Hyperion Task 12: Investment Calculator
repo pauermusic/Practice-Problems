@@ -1,0 +1,14 @@
+import math
+
+P = float(input('Enter the amount you are depositing: '))
+i = float(input('Enter the interest rate: '))
+r = i / 100
+t = float(input('Enter the number of years of the investment: '))
+interest = str.lower(input('Simple or compound interest? '))
+
+if interest == 'simple':
+    amount = P*(1+r*t)
+    print('Your total amount after investment will be: ' + str(int(amount)))
+elif interest == 'compound':
+    amount = P*math.pow((1+r), t)
+    print('Your total amount after investment will be: ' + str(int(amount)))
