@@ -1,0 +1,42 @@
+nights = int(input('Enter the number of nights '
+                       'you wish to stay: '))
+
+city = (input('Enter the city from which '
+              'you are travelling: ')).lower()
+
+cardays = int(input('How many days would you like '
+                    'to rent a car? '))
+
+def hotelcost(nights):
+    return 234 * nights
+
+def travelcost(city):
+    if city == 'london':
+        return 55
+    elif city == 'manchester':
+        return 72
+    elif city == 'birmingham':
+        return 66
+    elif city == 'liverpool':
+        return 76
+    elif city == 'bristol':
+        return 60
+    elif city == 'brighton':
+        return 59
+    else:
+        return 0
+
+def carrental(cardays):
+    return 66 * cardays
+
+def holidaycost():
+    return (hotelcost(nights) + travelcost(city)
+            + carrental(cardays))
+
+print('The total cost of your holiday is £'
++ str(holidaycost()) + '.')
+
+if travelcost(city) == 0:
+    print('The city you are travelling from was not '
+          'found in our database so the cost listed '
+          'does not include the price of travel.')
